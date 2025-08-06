@@ -598,7 +598,7 @@ body {
     padding: 60px 30px;
     box-shadow: none;
     border-radius: 60px;
-    width: auto;
+    min-width: 300px;
     margin-right: 24px;
   }
 
