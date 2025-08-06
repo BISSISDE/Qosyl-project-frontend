@@ -598,7 +598,7 @@ body {
     padding: 60px 30px;
     box-shadow: none;
     border-radius: 60px;
-    width: 300px;
+    width: auto;
   }
 
   .motivationContainer {
@@ -634,7 +634,6 @@ body {
     width: 35px;
     height: 35px;
     font-size: 18px;
-    margin-right: 50px;
   }
 
   .progressText {
