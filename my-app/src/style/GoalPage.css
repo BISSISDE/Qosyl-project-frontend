@@ -599,6 +599,7 @@ body {
     box-shadow: none;
     border-radius: 60px;
     width: auto;
+    margin-right: 24px;
   }
 
   .motivationContainer {
