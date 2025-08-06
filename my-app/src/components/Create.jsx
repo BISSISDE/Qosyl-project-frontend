@@ -14,7 +14,7 @@ export default function InvitePage() {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/api/invite/friend", {
+      const res = await fetch("https://qosyl-project-backend.onrender.com/api/invite/friend", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

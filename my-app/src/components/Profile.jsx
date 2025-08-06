@@ -19,7 +19,7 @@ export default function ProfilePage() {
         const token = localStorage.getItem("token");
         console.log(token);
 
-        const res = await fetch("http://localhost:3000/api/invite/my", {
+        const res = await fetch("https://qosyl-project-backend.onrender.com/api/invite/my", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -82,7 +82,7 @@ export default function ProfilePage() {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/api/profile/avatar", {
+      const response = await fetch("https://qosyl-project-backend.onrender.com/api/profile/avatar", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

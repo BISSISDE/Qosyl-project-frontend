@@ -53,7 +53,7 @@ export default function GoalPage() {
 
   const fetchCurrentUser = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/auth/me", {
+      const res = await axios.get("https://qosyl-project-backend.onrender.com/api/auth/me", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCurrentUserId(res.data.id);
@@ -64,7 +64,7 @@ export default function GoalPage() {
 
   const fetchGoalData = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/api/goal/${id}`, {
+      const res = await axios.get(`https://qosyl-project-backend.onrender.com/api/goal/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setGoal(res.data.goal);
@@ -85,7 +85,7 @@ export default function GoalPage() {
     if (!newTask.trim()) return;
     try {
       await axios.post(
-        `http://localhost:3000/api/tasks/${id}`,
+        `https://qosyl-project-backend.onrender.com/api/tasks/${id}`,
         {
           title: newTask,
         },
@@ -106,7 +106,7 @@ export default function GoalPage() {
     if (!newTitle.trim()) return;
     try {
       await axios.put(
-        `http://localhost:3000/api/tasks/${taskId}`,
+        `https://qosyl-project-backend.onrender.com/api/tasks/${taskId}`,
         {
           title: newTitle,
         },
@@ -127,7 +127,7 @@ export default function GoalPage() {
   const handleDeleteTask = async (taskId) => {
     if (!window.confirm("Тапсырманы өшіруге сенімдісіз бе?")) return;
     try {
-      await axios.delete(`http://localhost:3000/api/tasks/${taskId}`, {
+      await axios.delete(`https://qosyl-project-backend.onrender.com/api/tasks/${taskId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchGoalData();
@@ -148,7 +148,7 @@ export default function GoalPage() {
     try {
       const formattedDay = new Date(day).toISOString().split("T")[0];
       await axios.put(
-        `http://localhost:3000/api/tasks/status/${taskId}`,
+        `https://qosyl-project-backend.onrender.com/api/tasks/status/${taskId}`,
         {
           day: formattedDay,
           status: newStatus,

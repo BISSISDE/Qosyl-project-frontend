@@ -198,7 +198,7 @@ If you want to tell the purpose or uniqueness of the site, it is important that 
     if (storedUser) {
       const userId = storedUser.id;
       const avatar = storedUser.avatar;
-      setAvatarUrl(`http://localhost:3000/uploads/${userId}/${avatar}`);
+      setAvatarUrl(`https://qosyl-project-backend.onrender.com/uploads/${userId}/${avatar}`);
     }
   }, []);
 
