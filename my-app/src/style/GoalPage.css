@@ -566,7 +566,7 @@ body {
     width: 300px !important;
   }
   .tasksList{
-    width: 300px !important;
+    width: 250px !important;
   }
 }
 @media (max-width: 480px) {
