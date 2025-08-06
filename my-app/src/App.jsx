@@ -67,7 +67,7 @@ function App() {
             </>
           }
         />
-        <Route path="invite/:token" element={<Join />} />
+        <Route path="/invite/:token" element={<Join />} />
         <Route
           path="goal/:id"
           element={
