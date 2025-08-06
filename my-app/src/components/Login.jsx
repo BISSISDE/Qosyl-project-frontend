@@ -28,10 +28,13 @@ function Login() {
     }
 
     try {
-      const res = await axios.post("https://qosyl-project-backend.onrender.com/api/auth/login", {
-        username,
-        password,
-      });
+      const res = await axios.post(
+        "https://qosyl-project-backend.onrender.com/api/auth/login",
+        {
+          username,
+          password,
+        }
+      );
 
       const user = res.data.user;
       localStorage.setItem("token", res.data.token);

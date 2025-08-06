@@ -36,11 +36,14 @@ function Register() {
     }
 
     try {
-      const res = await axios.post("https://qosyl-project-backend.onrender.com/api/auth/register", {
-        username,
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://qosyl-project-backend.onrender.com/api/auth/register",
+        {
+          username,
+          email,
+          password,
+        }
+      );
 
       const user = res.data.user;
       localStorage.setItem("token", res.data.token);
