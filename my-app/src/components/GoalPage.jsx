@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import axios from "../utils/axiosInstance";
 import { useParams } from "react-router-dom";
 import "../style/GoalPage.css";
 import trashIcon from "../images/trashIcon.png";
@@ -9,6 +8,7 @@ import motivation1 from "../images/motivation1.png";
 import motivation2 from "../images/motivation2.png";
 import motivation3 from "../images/motivation3.png";
 import { toast } from "react-toastify"; 
+import axios from "axios";
 const decodeToken = (token) => {
   try {
     const base64Url = token.split(".")[1];
