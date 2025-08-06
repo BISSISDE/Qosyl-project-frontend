@@ -563,7 +563,10 @@ body {
 }
 @media (min-width: 375px) and (max-width: 380px) {
   .userSection{
-    width: 250px !important;
+    width: 300px !important;
+  }
+  .tasksList{
+    width: 300px !important;
   }
 }
 @media (max-width: 480px) {
