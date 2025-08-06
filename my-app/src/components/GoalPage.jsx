@@ -127,9 +127,12 @@ export default function GoalPage() {
   const handleDeleteTask = async (taskId) => {
     if (!window.confirm("Тапсырманы өшіруге сенімдісіз бе?")) return;
     try {
-      await axios.delete(`https://qosyl-project-backend.onrender.com/api/tasks/${taskId}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await axios.delete(
+        `https://qosyl-project-backend.onrender.com/api/tasks/${taskId}`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       fetchGoalData();
       showNotification("Тапсырма өшірілді", "success");
     } catch (err) {

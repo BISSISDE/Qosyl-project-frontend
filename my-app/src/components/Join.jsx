@@ -34,7 +34,7 @@ export default function Join() {
       }
 
       const res = await axios.post(
-        "/api/invite/join",
+        "https://qosyl-project-backend.onrender.com/api/invite/join",
         { token },
         {
           headers: {
