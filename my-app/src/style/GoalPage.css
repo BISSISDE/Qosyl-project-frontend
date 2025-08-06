@@ -561,7 +561,11 @@ body {
     justify-content: flex-end;
   }
 }
-
+@media (max-width: 375px) {
+  .userSection{
+    width: 250px !important;
+  }
+}
 @media (max-width: 480px) {
 
   .welcomeTitle,
@@ -598,7 +602,6 @@ body {
     padding: 60px 30px;
     box-shadow: none;
     border-radius: 60px;
-    min-width: 300px;
     margin-right: 24px;
   }
 
