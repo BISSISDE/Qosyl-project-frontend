@@ -8,28 +8,30 @@ function Register() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
-  const [statusType, setStatusType] = useState(""); 
+  const [statusType, setStatusType] = useState("");
 
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    setError("");
+    setStatusMessage("");
 
     if (username === "") {
-      setError("Атыңыз бос болмауы керек");
+      setStatusMessage("Атыңыз бос болмауы керек");
+      setStatusType("error");
       return;
     }
 
     if (password.length < 6) {
-      setError("Құпия сөз кемінде 6 таңбадан тұруы керек");
+      setStatusMessage("Құпия сөз кемінде 6 таңбадан тұруы керек");
+      setStatusType("error");
       return;
     }
 
     if (!email.includes("@")) {
-      setError("Электронды пошта дұрыс емес");
+      setStatusMessage("Электронды пошта дұрыс емес");
+      setStatusType("error");
       return;
     }
 
@@ -128,14 +130,12 @@ function Register() {
               </button>
             </div>
 
-            {error && <p className="error-text">{error}</p>}
-
             <button type="submit" className="submit-button">
               Тіркелу
             </button>
 
             <p className="form-footer">
-              Аккаунтыңыз бар ма?
+              Аккаунтыңыз бар ма?{" "}
               <span
                 className="register-link"
                 onClick={() => navigate("/login")}

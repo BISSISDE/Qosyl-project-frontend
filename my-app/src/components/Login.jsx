@@ -3,24 +3,27 @@ import { useNavigate } from "react-router-dom";
 import "../style/Register.css";
 import apple from "../images/Apple black logo.png";
 import axios from "axios";
+
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
-  const [statusType, setStatusType] = useState(""); 
+  const [statusType, setStatusType] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError("");
+    setStatusMessage("");
+
     if (username === "") {
-      setError("Атыңыз бос болмауы керек");
+      setStatusMessage("Атыңыз бос болмауы керек");
+      setStatusType("error");
       return;
     }
 
     if (password.length < 6) {
-      setError("Құпия сөз кемінде 6 таңбадан тұруы керек");
+      setStatusMessage("Құпия сөз кемінде 6 таңбадан тұруы керек");
+      setStatusType("error");
       return;
     }
 
@@ -29,8 +32,8 @@ function Login() {
         username,
         password,
       });
-      const user = res.data.user;
 
+      const user = res.data.user;
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(user));
 
@@ -42,10 +45,9 @@ function Login() {
         navigate("/profile");
       }, 2000);
     } catch (err) {
-      setStatusMessage("Қате шықты.");
+      setStatusMessage(err.response?.data?.message || "Кіру сәтсіз болды");
       setStatusType("error");
       setTimeout(() => setStatusMessage(""), 3000);
-      setError(err.response?.data?.message || "Кіру сәтсіз болды");
     }
   };
 
@@ -54,6 +56,7 @@ function Login() {
       {statusMessage && (
         <div className={`statusMessage ${statusType}`}>{statusMessage}</div>
       )}
+
       <div className="register-left">
         <img
           src="https://4kwallpapers.com/images/wallpapers/green-abstract-1920x1080-21853.png"
@@ -106,14 +109,12 @@ function Login() {
               </button>
             </div>
 
-            {error && <p className="error-text">{error}</p>}
-
             <button type="submit" className="submit-button">
               Кіру
             </button>
 
             <p className="form-footer">
-              Аккаунтыңыз жоқ па?
+              Аккаунтыңыз жоқ па?{" "}
               <span
                 className="register-link"
                 onClick={() => navigate("/register")}
