@@ -1,0 +1,382 @@
+/* =======================
+   SECTION 1 - Hero
+======================= */
+.section1 {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section1_title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #9b9bbd;
+}
+
+.section1_desc {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 60px;
+}
+
+.section1_bot {
+    margin: 20px 0;
+}
+
+.section1_robot {
+    width: 1200px;
+    height: auto;
+    margin-top: -150px;
+    animation: floatT 3s ease-in-out infinite;
+}
+
+@keyframes floatT {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.section1_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: hidden;
+}
+
+.card_img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card_img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive - Section 1 */
+@media (max-width: 768px) {
+    .section1 {
+        padding: 20px 10px;
+    }
+
+    .section1_title {
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+
+    .section1_desc {
+        font-size: 0.9rem;
+        margin-top: 50px;
+    }
+
+    .section1_robot {
+        width: 100%;
+        height: auto;
+        margin-top: 10px !important;
+    }
+
+    .card_img {
+        max-width: 150px;
+        height: 100px;
+    }
+
+    .section1_cards {
+        margin-top: 130px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+
+/* =======================
+   SECTION 2
+======================= */
+.section2 {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section2_title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.section2_desc {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 20px;
+    width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section2_img {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    height: auto;
+    margin-top: 50px !important;
+    border-radius: 12px;
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+/* Responsive - Section 2 */
+@media (max-width: 768px) {
+    .section2 {
+        padding: 20px 10px;
+    }
+
+    .section2_title {
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+
+    .section2_desc {
+        font-size: 0.9rem;
+        margin-top: 20px;
+        width: 250px;
+    }
+
+    .section2_desc br {
+        display: none;
+    }
+
+    .section2_img {
+        width: 100%;
+        height: auto;
+        margin-top: 30px !important;
+    }
+}
+
+/* =======================
+   SECTION 3 - Cards
+======================= */
+.section3 {
+    padding: 80px 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.section3_title {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section3_desc {
+    font-size: 1.1rem;
+    color: #374151;
+    text-align: center;
+    max-width: 950px;
+    margin: 0 auto 60px;
+    line-height: 1.8;
+}
+
+.section3Cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card1Section3 {
+    width: 320px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card1Section3:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+.card1Section3 h1 {
+    font-size: 1.4rem;
+    color: #064e3b;
+    margin: 20px 0 12px;
+    font-weight: 700;
+}
+
+.card1Section3 p {
+    font-size: 0.95rem;
+    color: #2a2a2a;
+    line-height: 1.6;
+}
+
+.ellipse {
+    width: 85px;
+    height: 85px;
+    background: linear-gradient(145deg, #d1fae5, #a7f3d0);
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nom1 {
+    width: 45px;
+    height: 45px;
+}
+
+/* Responsive - Section 3 */
+@media (max-width: 992px) {
+    .section3_title {
+        font-size: 2.4rem;
+    }
+
+    .section3_desc {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .card1Section3 {
+        width: 85%;
+    }
+}
+
+@media (max-width: 600px) {
+    .section3_title {
+        font-size: 1.9rem;
+    }
+
+    .section3_desc {
+        font-size: 0.9rem;
+    }
+
+    .card1Section3 h1 {
+        font-size: 1.2rem;
+    }
+
+    .card1Section3 p {
+        font-size: 0.85rem;
+    }
+}
+
+/* =======================
+   SECTION 4
+======================= */
+.section4 {
+    padding: 80px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.section4 h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+    line-height: 1.2;
+    color: #000000;
+}
+
+.section4 img {
+    max-width: 750px;
+    margin-right: -30px;
+    transition: transform 0.3s;
+}
+
+.section4 img:hover {
+    transform: scale(1.02);
+}
+
+/* =======================
+   SECTION 4 - Responsive
+======================= */
+@media (max-width: 1024px) {
+    .section1 .section1_cards {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: auto;
+        margin-top: -30px;
+    }
+
+    .section1 {
+        margin-top: -200px;
+    }
+
+    .container {
+        margin-top: 250px;
+        margin-bottom: -100px;
+    }
+
+    .section3Cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 200px;
+    }
+
+    .section3 {
+        margin-bottom: -100px;
+    }
+
+    .section4 {
+        flex-direction: column-reverse;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .section4 h1 {
+        font-size: 2.5rem;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .section4 img {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .section4 {
+        padding: 40px 20px;
+        gap: 40px;
+    }
+
+    .section4 h1 {
+        font-size: 1rem;
+        text-align: right;
+        width: 200px;
+        margin-top: -100px;
+        margin-right: 20px;
+    }
+
+    .section4 img {
+        width: 100%;
+    }
+}

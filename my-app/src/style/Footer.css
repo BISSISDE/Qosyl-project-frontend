@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kaisei+HarunoUmi&family=Lilita+One&family=Lobster&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oleo+Script:wght@400;700&family=Orelega+One&family=Oswald:wght@200..700&family=Pacifico&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Dirt&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&family=Rubik+Spray+Paint&family=Shrikhand&family=Triodion&display=swap');
+
+.footer {
+    padding: 50px 140px;
+    font-family: sans-serif;
+    color: #222;
+    position: relative;
+    overflow: hidden;
+    height: 700px;
+}
+
+.footer_top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer_logo_social {
+    max-width: 250px;
+    margin-top: 50px;
+}
+
+.footer_logo {
+    font-size: 58px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-family: "Rubik Doodle Shadow", system-ui;
+}
+
+.footer_logo span {
+    font-size: 68px;
+    color: #00c853;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.footer_stay {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.footer_icons img {
+    width: 200px;
+}
+
+.footer_icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer_links h3,
+.footer_contact h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.footer_contact h3 {
+    margin-bottom: 15px;
+}
+
+.footer_links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_links li {
+    margin-bottom: 35px;
+    font-weight: 500;
+    color: #444;
+}
+
+.footer_contact p {
+    margin: 5px 0 35px;
+    font-weight: 500;
+}
+
+.footer_bot {
+    margin-top: 30px;
+    width: 200px;
+}
+
+.footer_bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #66bb6a;
+}
+
+.footer::before {
+    content: "QOSYL";
+    position: absolute;
+    top: 75%;
+    left: -10px;
+    font-size: 440px;
+    color: #159539;
+    font-weight: 900;
+    text-align: center;
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
+    transform: translateY(-30%);
+}
+
+@media (max-width: 500px) {
+    .footer {
+        padding: 30px 20px;
+        height: auto;
+    }
+
+    .footer_top {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .footer_logo {
+        font-size: 70px;
+        text-align: center;
+    }
+
+    .footer_logo span {
+        font-size: 80px;
+    }
+
+    .footer_stay {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .footer_icons img {
+        width: 140px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .footer_links h3,
+    .footer_contact h3 {
+        text-align: center;
+    }
+
+    .footer_links ul {
+        text-align: center;
+    }
+
+    .footer_links li {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .footer_contact p {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .footer_bot {
+        width: 170px;
+        display: block;
+        margin: auto 0;
+        margin-top: -30px;
+    }
+
+    .footer_bottom {
+        font-size: 12px;
+        margin-top: -20px;
+    }
+
+    .footer::before {
+        display: none;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+    .footer {
+        padding: 40px 60px;
+        height: auto;
+    }
+
+    .footer_top {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .footer_logo {
+        font-size: 64px;
+        text-align: center;
+    }
+
+    .footer_logo span {
+        font-size: 72px;
+    }
+
+    .footer_logo_social {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .footer_stay {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .footer_icons img {
+        width: 160px;
+        display: block;
+        margin: 10px auto 0;
+    }
+
+    .footer_links h3,
+    .footer_contact h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .footer_links ul,
+    .footer_contact p {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .footer_links li {
+        margin-bottom: 25px;
+    }
+
+    .footer_bot {
+        width: 180px;
+        display: block;
+        margin: 40px auto 0;
+    }
+
+    .footer_bottom {
+        font-size: 13px;
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    .footer::before {
+        font-size: 280px;
+        top: 80%;
+        transform: translateY(-50%);
+        opacity: 0.25;
+    }
+}

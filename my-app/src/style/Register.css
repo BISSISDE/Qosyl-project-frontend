@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f6f8;
+}
+
+.auth-button {
+    border: none !important;
+    border-radius: 20px !important;
+}
+
+@media (min-width: 1024px) {
+    .register-container {
+        flex-direction: row;
+    }
+}
+
+.register-left {
+    position: relative;
+    background-color: black;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+}
+
+.background-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.register-right {
+    flex: 1;
+    background-color: #f5f6f8;
+    margin-left: -50px;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 0px 140px rgb(0, 0, 0);
+}
+
+.register-form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-title {
+    font-size: 1.875rem;
+    font-weight: 900;
+    color: black;
+    text-align: center;
+    font-family: 'Poppins', 'sans-serif', 'Noto Sans';
+}
+
+.input-label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.input-field {
+    width: 100%;
+    padding: 17px;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+    color: #000000;
+    margin: 10px;
+}
+
+.divider {
+    text-align: center;
+    color: #9ca3af;
+    margin: 20px;
+}
+
+.auth-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .auth-buttons {
+        flex-direction: row;
+    }
+
+    .register-container {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .register-form {
+        margin-left: 50px;
+        padding: 1rem;
+    }
+
+    .register-right {
+        padding-top: 0;
+        scale: 1.5;
+    }
+}
+
+@media (max-width: 768px) {
+    .register-container {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .divider {
+        font-size: 14px
+    }
+
+    .register-left {
+        height: 200px;
+        padding: 0;
+    }
+
+    .background-image {
+        object-fit: cover;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+
+    .register-right {
+        margin-left: 0;
+        border-radius: 2rem 2rem 0 0;
+        padding: 4rem 2rem;
+        margin-top: -50px;
+    }
+
+    .register-form {
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+    }
+
+    .submit-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .auth-button {
+        font-size: 0.75rem;
+        height: 50px;
+    }
+
+    .form-footer {
+        font-size: 0.8rem;
+    }
+
+    .error-text {
+        font-size: 12px !important;
+    }
+
+    .input-field {
+        padding: 14px;
+    }
+}
+
+.auth-button {
+    border: 2px solid #c5c5c5a6;
+    background-color: white;
+    width: 100%;
+    padding: 17px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.auth-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.error-text {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #ef4444;
+}
+
+.submit-button {
+    background-color: #a3e635;
+    color: white;
+    width: 100%;
+    padding: 17px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #95E362;
+}
+
+.form-footer {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.register-link {
+    color: #95E362;
+    font-weight: 600;
+    cursor: pointer;
+    padding-left: 0.25rem;
+}
+
+.statusMessage {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    max-width: 90vw;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    z-index: 10000;
+    animation: slideInLeft 0.4s ease-out;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.statusMessage.success {
+    background: linear-gradient(135deg, #159538 0%, #0f7a2e 100%);
+    color: white;
+}
+
+.statusMessage.error {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .statusMessage {
+        top: 80px !important;
+        left: 210px !important;
+        right: auto !important;
+        height: fit-content;
+        font-size: 14px;
+        padding: 12px 20px;
+        text-align: center;
+        width: fit-content;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .statusMessage {
+        top: 90px;
+        left: 750px;
+        right: auto;
+        font-size: 16px;
+        padding: 14px 24px;
+        width: fit-content;
+        text-align: center;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

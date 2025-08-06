@@ -1,0 +1,208 @@
+.instructions-page {
+    padding: 3rem;
+    color: #333;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.instructions-title {
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+    color: #159538;
+    font-weight: 700;
+}
+
+.instructions-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instruction-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.step-card {
+    background-color: #f8fef5;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 500px;
+    max-width: 90%;
+    text-align: center;
+    border: 1px solid #d6eac9;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+    color: #159538;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.step-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+    font-weight: 600;
+}
+
+.step-card p {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.step-link {
+    display: inline-block;
+    background-color: #159538;
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.step-link:hover {
+    background-color: #7ecf4e;
+    transform: scale(1.05);
+}
+
+.goal-info {
+    margin-top: 3rem !important;
+    background-color: #f0fdf1;
+    padding: 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 1100px;
+    margin: 0 auto;
+    color: #333;
+    border: 1px solid #c4e8b8;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.warning-section {
+    background-color: #ffd8d8;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-radius: 15px;
+    color: #cc0000;
+    border-left: 5px solid #ff4d4d;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.warning-section h3 {
+    color: #ff4d4d;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.warning-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.warning-section li {
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+.warning-section li strong {
+    color: #000;
+}
+
+@media (max-width: 1024px) {
+    .instructions-page {
+        padding: 2rem;
+    }
+
+    .instructions-title {
+        font-size: 2.2rem;
+    }
+
+    .instructions-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .step-card {
+        width: 300px !important;
+    }
+
+    .warning-section {
+        width: 700px;
+    }
+
+    .goal-info {
+        flex-direction: column;
+        text-align: center;
+        width: 680px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .instructions-page {
+        padding: 1.5rem;
+    }
+
+    .instructions-title {
+        font-size: 1.9rem;
+    }
+
+    .instructions-subtitle {
+        font-size: 1rem;
+    }
+
+    .step-card {
+        padding: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .step-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .goal-info {
+        font-size: 0.95rem;
+        gap: 0.5rem;
+        width: auto;
+    }
+
+    .warning-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .warning-section {
+        width: auto;
+    }
+
+    .warning-section li {
+        font-size: 0.95rem;
+    }
+}

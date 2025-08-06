@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaisei+HarunoUmi&family=Lilita+One&family=Lobster&family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oleo+Script:wght@400;700&family=Orelega+One&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Pacifico&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Rubik+Dirt&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&family=Rubik+Spray+Paint&family=Shrikhand&family=Triodion&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.section {
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+.text1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textBlock h1 {
+    font-size: 60px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.black {
+    color: #000;
+}
+
+.blue {
+    color: #9095C2;
+}
+
+.botIcons {
+    width: 300px;
+    align-self: center;
+}
+
+.desc1 {
+    max-width: 1700px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #9095C2;
+    margin-top: 15px;
+}
+
+.phones {
+    margin-top: 85px;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 10px;
+    }
+
+    .textBlock h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .botIcons {
+        display: none;
+    }
+
+    .textBlock h2 {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .phone {
+        width: 90%;
+        max-width: 320px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .text1 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .desc1 {
+        font-size: 14px;
+        padding: 10px 65px;
+        line-height: 1.5;
+        text-align: center;
+        color: #555;
+    }
+
+    .blue {
+        margin: 5px;
+    }
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    flex-direction: column;
+
+}
+
+.features .card img {
+    object-fit: cover;
+}
+
+.features .card {
+    background: white;
+    border-radius: 40px;
+    padding: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    width: 450px;
+    height: 480px;
+}
+
+.features .texts {
+    padding: 0px 10px;
+}
+
+.features h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #000000;
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+}
+
+.features .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.features .title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+    margin-top: 20px;
+}
+
+.features .title span {
+    color: #3B6828;
+}
+
+.features .desc {
+    font-size: 16px;
+    color: #a0a0a0;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.features button {
+    padding: 10px 20px;
+    background: #D9D9D9;
+    color: #3B6828;
+    border: none;
+    border-radius: 99px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: underline;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+}
+
+@media (max-width: 1024px) {
+    .features .cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .features .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .features .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+    }
+
+    .features h2 {
+        font-size: 2rem;
+    }
+
+    .features .title {
+        font-size: 20px;
+    }
+
+    .features .desc {
+        font-size: 15px;
+    }
+
+    .features button {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .features {
+        padding: 20px 10px;
+    }
+
+    .features h2 {
+        font-size: 1.6rem;
+    }
+
+    .features .card {
+        padding: 12px;
+        border-radius: 24px;
+    }
+
+    .features .title {
+        font-size: 18px;
+    }
+
+    .features .desc {
+        font-size: 14px;
+    }
+
+    .features button {
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+}
+
+.faq-wrapper {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.faq-wrapper h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.faq-item {
+    background: #ffffff;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+}
+
+.faq-question {
+    padding: 20px 24px;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #3B6828;
+}
+
+.faq-icon {
+    font-size: 26px;
+    font-weight: bold;
+    color: #3B6828;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(180deg);
+    color: #17252a;
+}
+
+.faq-answer {
+    padding: 0 24px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.faq-item.open .faq-answer {
+    padding: 10px 24px 20px;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .faq-wrapper h2 {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    .faq-item {
+        border-radius: 16px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        margin: 26px;
+    }
+
+    .faq-question {
+        font-size: 16px;
+        padding: 18px 20px;
+    }
+
+    .faq-icon {
+        font-size: 24px;
+    }
+
+    .faq-answer {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    .faq-item.open .faq-answer {
+        padding: 8px 20px 16px;
+    }
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 200px;
+}
+
+.about h1 {
+    font-size: 60px;
+    font-weight: 900;
+    color: #000000;
+}
+
+.about img {
+    width: 600px;
+    height: auto;
+    border-radius: 30px;
+}
+
+@media (max-width: 1024px) {
+    .about {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+
+    .about h1 {
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .about img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .about h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .about {
+        padding: 30px 16px;
+    }
+
+    .about img {
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+.divTimeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 120px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.divTime {
+    height: 40rem;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.divTimeContainer h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #000000;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+.divTime.one {
+    margin-bottom: 20px;
+}
+
+.divTime.two {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .divTimeContainer {
+        flex-direction: column;
+        padding: 30px 20px;
+        margin-top: -100px;
+        margin-bottom: -100px;
+    }
+
+    .divTime {
+        height: auto;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .divTime.one {
+        transform: rotate(-90deg);
+        width: 200px;
+        margin-bottom: -100px;
+    }
+
+    .divTime.two {
+        transform: rotate(90deg);
+        width: 200px;
+        margin-top: -100px;
+    }
+
+    .divTimeContainer h2 {
+        font-size: 1.1rem;
+        max-width: 70%;
+    }
+}
+
+.justdoit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+}
+
+.justdoit img {
+    width: 12%;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.justdoit img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .justdoit {
+        margin: 40px 0;
+    }
+
+    .justdoit img {
+        width: 35%;
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .section {
+        padding: 40px 30px;
+    }
+
+    .textBlock h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .desc1 {
+        font-size: 15px;
+        padding: 0 80px;
+    }
+
+    .features h2 {
+        font-size: 2.2rem;
+    }
+
+    .features .cards {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .features .card {
+        width: 40%;
+        padding: 18px;
+        border-radius: 30px;
+    }
+
+    .features .title {
+        font-size: 22px;
+    }
+
+    .features .desc {
+        font-size: 15px;
+    }
+
+    .about {
+        gap: 80px;
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .about h1 {
+        font-size: 48px;
+    }
+
+    .about img {
+        width: 50%;
+
+    }
+
+    .faq-wrapper h2 {
+        font-size: 2.5rem;
+    }
+
+    .faq-question {
+        font-size: 17px;
+    }
+
+    .faq-answer {
+        font-size: 15px;
+    }
+
+    .divTimeContainer {
+        margin-top: -200px;
+        margin-bottom: -200px;
+    }
+
+    .divTimeContainer h2 {
+        font-size: 1.7rem;
+        max-width: 80%;
+    }
+
+    .divTime.one {
+        height: auto;
+        transform: rotate(-90deg);
+        width: 400px;
+        margin-bottom: -200px;
+    }
+
+    .divTime.two {
+        height: auto;
+        transform: rotate(90deg);
+        width: 400px;
+        margin-top: -200px;
+    }
+
+    .justdoit img {
+        width: 20%;
+    }
+}

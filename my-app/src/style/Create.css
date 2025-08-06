@@ -1,0 +1,235 @@
+.inviteContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10rem;
+    margin: 20px;
+}
+
+.inviteText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.oneSideinvite {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.oneSideinvite h1 {
+    font-size: 3rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    width: 500px;
+}
+
+.oneSideinvite button {
+    background-color: #95E362;
+    color: #ffffff;
+    padding: 0.7rem 1.4rem;
+    border-radius: 20px;
+    border: 2px solid #85c758;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    width: 250px;
+    height: 60px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 8px 15px rgba(149, 227, 98, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.oneSideinvite button:hover {
+    background-color: #7dcf4e;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(125, 207, 78, 0.4);
+}
+
+.oneSideinvite button:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(125, 207, 78, 0.3);
+}
+
+.twoSideinvite {
+    flex: 1;
+    padding: 1rem;
+}
+
+.twoSideinvite img {
+    max-width: 550px;
+    height: auto;
+}
+
+.inviteSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.inviteSection2 {
+    margin-top: 150px;
+}
+
+.inviteSection2 h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+}
+
+.input-label2 {
+    font-size: 18px;
+    color: #939393;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.input-field2 {
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 3px solid #95E362;
+    background-color: transparent;
+    outline: none;
+    font-size: 14px;
+}
+
+.inputContainer {
+    margin-top: 100px;
+}
+
+.generate-button {
+    background-color: #95E362;
+    color: #ffffff;
+    padding: 0.7rem 1.4rem;
+    border-radius: 20px;
+    border: 2px solid #85c758;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    width: 250px;
+    height: 60px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 8px 15px rgba(149, 227, 98, 0.3);
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.generate-button:hover {
+    background-color: #7dcf4e;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(125, 207, 78, 0.4);
+}
+
+.generate-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(125, 207, 78, 0.3);
+}
+
+.link-container {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .inviteContainer {
+        padding: 2rem 4rem;
+    }
+
+    .oneSideinvite h1 {
+        font-size: 2.5rem;
+        width: 100%;
+    }
+
+    .twoSideinvite img {
+        max-width: 100%;
+    }
+
+    .oneSideinvite button {
+        width: 200px;
+        height: 50px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .inviteText {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .inviteContainer {
+        padding: 2rem;
+        gap: 30px;
+    }
+
+    .oneSideinvite,
+    .twoSideinvite {
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    .oneSideinvite h1 {
+        font-size: 2.2rem;
+    }
+
+    .inviteSection2 h1 {
+        font-size: 2.2rem;
+    }
+
+    .oneSideinvite button,
+    .generate-button {
+        width: 90%;
+        height: 55px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .oneSideinvite h1,
+    .inviteSection2 h1 {
+        font-size: 1.8rem;
+    }
+
+    .inviteContainer {
+        padding: 1rem;
+    }
+
+    .inviteSection2 {
+        margin-top: 10px;
+    }
+
+    .oneSideinvite button {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .input-field2 {
+        font-size: 13px;
+    }
+
+    .input-label2 {
+        font-size: 16px;
+    }
+
+    .oneSideinvite button,
+    .generate-button {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
+        border-radius: 16px;
+    }
+}
