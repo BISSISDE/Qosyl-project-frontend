@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../style/Profile.css";
-
+import { toast } from "react-toastify";
 export default function ProfilePage() {
   const navigate = useNavigate();
   const [preview, setPreview] = useState(null);
@@ -76,7 +76,7 @@ export default function ProfilePage() {
     const token = localStorage.getItem("token");
 
     if (!token) {
-      alert("Сессия аяқталды. Қайта кіріңіз.");
+      toast.error("Сессия аяқталды. Қайта кіріңіз.");
       navigate("/login");
       return;
     }
@@ -98,7 +98,7 @@ export default function ProfilePage() {
           );
         }
         if (response.status === 403) {
-          alert("Рұқсат жоқ немесе токен жарамсыз. Қайта кіріңіз.");
+          toast.error("Рұқсат жоқ немесе токен жарамсыз. Қайта кіріңіз.");
           localStorage.removeItem("token");
           localStorage.removeItem("user");
           navigate("/login");
@@ -115,13 +115,13 @@ export default function ProfilePage() {
         const updatedUser = { ...user, avatar: result.avatar };
         setUser(updatedUser);
         localStorage.setItem("user", JSON.stringify(updatedUser));
-        alert("Аватар сәтті қосылды!");
+        toast.success("Аватар қосылды!");
       } else {
         alert(result.message || "Белгісіз жауап");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Аватарды жүктеу кезінде қате шықты! " + error.message);
+      toast.error("Қате кетті, қайталап көріңіз");
     }
   };
 

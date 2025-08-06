@@ -9,7 +9,7 @@ export default function InvitePage() {
 
   const handleGenerateLink = async () => {
     if (!goalName || !durationDays) {
-      alert("Барлық жолдарды толтырыңыз");
+      toast.warn("Толық толтырмадыңыз");
       return;
     }
 
@@ -34,7 +34,7 @@ export default function InvitePage() {
 
       setInviteLink(data.inviteLink);
     } catch (err) {
-      alert("Қате: " + err.message);
+      toast.error("Қате: " + err.message);
     }
   };
 

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../style/Register.css";
 import apple from "../images/Apple black logo.png";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -17,12 +18,14 @@ function Login() {
 
     if (username === "") {
       setStatusMessage("Атыңыз бос болмауы керек");
+      toast.warn("Толық толтырмадыңыз");
       setStatusType("error");
       return;
     }
 
     if (password.length < 6) {
       setStatusMessage("Құпия сөз кемінде 6 таңбадан тұруы керек");
+      toast.warn("Толық толтырмадыңыз");
       setStatusType("error");
       return;
     }
@@ -40,7 +43,7 @@ function Login() {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(user));
 
-      setStatusMessage("Сәтті кірдіңіз!");
+      toast.success("Сәтті кірдіңіз!");
       setStatusType("success");
 
       setTimeout(() => {
@@ -49,17 +52,12 @@ function Login() {
       }, 2000);
     } catch (err) {
       setStatusMessage(err.response?.data?.message || "Кіру сәтсіз болды");
-      setStatusType("error");
-      setTimeout(() => setStatusMessage(""), 3000);
+      toast.error("Қате кетті, қайталап көріңіз");
     }
   };
 
   return (
     <div className="register-container">
-      {statusMessage && (
-        <div className={`statusMessage ${statusType}`}>{statusMessage}</div>
-      )}
-
       <div className="register-left">
         <img
           src="https://4kwallpapers.com/images/wallpapers/green-abstract-1920x1080-21853.png"

@@ -8,7 +8,7 @@ import editIcon from "../images/editIcon.png";
 import motivation1 from "../images/motivation1.png";
 import motivation2 from "../images/motivation2.png";
 import motivation3 from "../images/motivation3.png";
-
+import { toast } from "react-toastify"; 
 const decodeToken = (token) => {
   try {
     const base64Url = token.split(".")[1];
@@ -95,10 +95,10 @@ export default function GoalPage() {
       );
       setNewTask("");
       fetchGoalData();
-      showNotification("Тапсырма қосылды", "success");
+      toast.success("Тапсырма қосылды!");
     } catch (err) {
       console.error("Тапсырма қосу қатесі:", err);
-      showNotification("Тапсырма қосу мүмкін болмады", "error");
+      toast.error("Тапсырма қосу мүмкін болмады!");
     }
   };
 
@@ -117,10 +117,10 @@ export default function GoalPage() {
       setEditingTask(null);
       setEditTitle("");
       fetchGoalData();
-      showNotification("Тапсырма жаңартылды", "success");
+      toast.success("Тапсырма жаңартылды!");
     } catch (err) {
       console.error("Тапсырма өзгерту қатесі:", err);
-      showNotification("Тапсырма өзгерту мүмкін болмады", "error");
+      toast.error("Тапсырма жаңарту мүмкін болмады!");
     }
   };
 
@@ -134,10 +134,10 @@ export default function GoalPage() {
         }
       );
       fetchGoalData();
-      showNotification("Тапсырма өшірілді", "success");
+      toast.success("Тапсырма өшірілді!");
     } catch (err) {
       console.error("Тапсырма өшіру қатесі:", err);
-      showNotification("Тапсырма өшіру мүмкін болмады", "error");
+      toast.error("Тапсырма өшіру мүмкін болмады!");
     }
   };
 
@@ -164,30 +164,15 @@ export default function GoalPage() {
         }
       );
       if (newStatus) {
-        showNotification(`"${taskTitle}" орындалды!`, "success");
+        toast.success(`"${taskTitle}" орындалды!`);
       } else {
-        showNotification(
-          `"${taskTitle}" орындалмады деп белгіленді`,
-          "success"
-        );
+        toast.error(`"${taskTitle}" орындалмады деп белгіленді`);
       }
       fetchGoalData();
     } catch (err) {
       console.error("Статус жаңарту қатесі:", err);
-      showNotification("Статус жаңарту мүмкін болмады", "error");
+      toast.error("Статус жаңарту мүмкін болмады");
     }
-  };
-
-  const showNotification = (message, type = "success") => {
-    const notification = document.createElement("div");
-    notification.className = `statusMessage ${type}`;
-    notification.textContent = message;
-    document.body.appendChild(notification);
-    setTimeout(() => {
-      if (notification.parentNode) {
-        notification.remove();
-      }
-    }, 3000);
   };
 
   const startEdit = (task) => {

@@ -17,10 +17,48 @@ import Error403 from "./components/ErrorPages/Error403";
 import Error404 from "./components/ErrorPages/Error404";
 import Error500 from "./components/ErrorPages/Error500";
 import PrivateRoute from "./routes/PrivateRoute";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <BrowserRouter>
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+        draggable
+        toastStyle={{
+          margin:"0 auto",
+          marginTop: "40px",
+          width:"300px",
+          background: "linear-gradient(135deg, #159538, #1db954)",
+          color: "#ffffff",
+          backdropFilter: "blur(15px)",
+          WebkitBackdropFilter: "blur(15px)",
+          border: "1px solid rgba(255, 255, 255, 0.2)",
+          boxShadow: "0 12px 28px rgba(0, 0, 0, 0.2)",
+          borderRadius: "20px",
+          fontSize: "17px",
+          fontWeight: "600",
+          letterSpacing: "0.3px",
+          padding: "20px 24px",
+          display: "flex",
+          alignItems: "center",
+          gap: "14px",
+          lineHeight: "1.4",
+          textShadow: "0 1px 2px rgba(0, 0, 0, 0.15)",
+        }}
+        progressStyle={{
+          background: "#ffffff",
+          height: "4px",
+          borderRadius: "2px",
+        }}
+      />
+
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

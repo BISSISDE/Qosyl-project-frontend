@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../style/Register.css";
 import apple from "../images/Apple black logo.png";
+import { toast } from "react-toastify";
 
 function Register() {
   const [username, setUsername] = useState("");
@@ -20,17 +21,20 @@ function Register() {
     if (username === "") {
       setStatusMessage("Атыңыз бос болмауы керек");
       setStatusType("error");
+      toast.warn("Толық толтырмадыңыз");
       return;
     }
 
     if (password.length < 6) {
       setStatusMessage("Құпия сөз кемінде 6 таңбадан тұруы керек");
+      toast.warn("Толық толтырмадыңыз");
       setStatusType("error");
       return;
     }
 
     if (!email.includes("@")) {
       setStatusMessage("Электронды пошта дұрыс емес");
+      toast.warn("Толық толтырмадыңыз");
       setStatusType("error");
       return;
     }
@@ -49,17 +53,10 @@ function Register() {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(user));
 
-      setStatusMessage("Сәтті тіркелдіңіз!");
-      setStatusType("success");
-
-      setTimeout(() => {
-        setStatusMessage("");
-        navigate("/profile");
-      }, 2000);
+      toast.success("Сәтті түрде сақталды!");
+      navigate("/profile");
     } catch (err) {
-      setStatusMessage("Қате шықты. Ақпараттарды тексеріңіз.");
-      setStatusType("error");
-      setTimeout(() => setStatusMessage(""), 3000);
+      toast.error("Қате кетті, қайталап көріңіз");
     }
   };
 

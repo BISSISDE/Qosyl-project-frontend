@@ -19,7 +19,7 @@ export default function Join() {
         setLoading(false);
       })
       .catch((err) => {
-        setError("Сілтеме дұрыс емес немесе мерзімі өтіп кеткен.");
+        toast.error("Сілтеме дұрыс емес немесе мерзімі өтіп кеткен.");
         setLoading(false);
       });
   }, [token]);
@@ -29,7 +29,7 @@ export default function Join() {
       const userToken = localStorage.getItem("token");
 
       if (!userToken) {
-        setError("Қосылу сәтсіз. Алдымен тіркелу керек.");
+        toast.error("Қосылу сәтсіз. Алдымен тіркелу керек.");
         return;
       }
 
@@ -46,7 +46,7 @@ export default function Join() {
       const { goalId } = res.data;
       navigate(`/goal/${goalId}`);
     } catch (err) {
-      setError("Қосылу сәтсіз. Тіркелу керек.");
+      toast.error("Қосылу сәтсіз. Алдымен тіркелу керек.");
     }
   };
 

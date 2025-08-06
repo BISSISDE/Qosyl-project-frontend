@@ -8,6 +8,7 @@ import justdoit from "../images/just do it.png";
 import all from "../images/all.png";
 import divTime1 from "../images/divTime1.png";
 import divTime2 from "../images/divTime2.png";
+import { Link } from "react-router-dom";
 export default function HomePage() {
   const [faqOpen, setFaqOpen] = useState([false, false, false]);
 
@@ -82,11 +83,12 @@ export default function HomePage() {
                 Maqsat betine <span>kiru</span>
               </p>
               <p className="desc">
-                Бұл бетте қолданушыны серіктесінің шақыру сілтемесі арқылы ортақ
-                мақсатқа қосуға арналған бет. Бұл бетте қолданушы аккаунт
-                жасайды.
+                Бұл бетте қолданушыны сілтеме жасаған автор профильден мақсатқа
+                кіре алады ал досы тек сілтемемен кіреді
               </p>
-              <button>Жалғастыру →</button>
+              <button>
+                <Link to='/profile'>Жалғастыру →</Link>
+              </button>
             </div>
           </div>
           <div className="card">
@@ -100,7 +102,9 @@ export default function HomePage() {
                 мүмкіндік береді. Сілтеме арқылы екінші адам қосылып, бірге
                 жұмыс істей бастайды.
               </p>
-              <button>Жалғастыру →</button>
+              <button>
+                <Link to="/InviteToGoal">Жалғастыру →</Link>
+              </button>
             </div>
           </div>
         </div>
