@@ -561,7 +561,7 @@ body {
     justify-content: flex-end;
   }
 }
-@media (max-width: 375px) {
+@media (min-width: 375px) and (max-width: 380px) {
   .userSection{
     width: 250px !important;
   }
