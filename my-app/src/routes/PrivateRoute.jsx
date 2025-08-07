@@ -3,7 +3,12 @@ import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 const PrivateRoute = ({ children }) => {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, loading } = useAuth();
+
+  if (loading) {
+    return <div>Loading...</div>; // Спиннер, скелетон қосуға болады
+  }
+
   return isAuthenticated ? children : <Navigate to="/unauthorized" />;
 };
 
