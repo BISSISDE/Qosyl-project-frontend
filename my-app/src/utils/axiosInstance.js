@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://qosyl-project-backend.onrender.com",
-  withCredentials: true,
+  baseURL: "https://qosyl-project-backend.onrender.com"
 });
 
 axiosInstance.interceptors.response.use(
