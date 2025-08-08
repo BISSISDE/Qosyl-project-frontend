@@ -409,6 +409,7 @@ body {
 .status{
   display: flex;
   flex-direction: row;
+  gap: 10px;
 }
 .progressText {
   position: absolute;
@@ -647,7 +648,7 @@ body {
     font-size: 18px;
   }
   .status{
-    margin-right: 80px;
+    margin-right: 100px;
   }
   .progressText {
     font-size: 24px;
