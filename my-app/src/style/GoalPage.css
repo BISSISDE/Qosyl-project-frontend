@@ -630,6 +630,7 @@ body {
 
   .taskCard {
     padding: 15px 20px;
+    width: 300px;
   }
 
   .taskTitle {
@@ -641,6 +642,7 @@ body {
     width: 35px;
     height: 35px;
     font-size: 18px;
+    margin-right: 39px;
   }
 
   .progressText {

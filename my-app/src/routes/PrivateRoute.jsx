@@ -6,7 +6,7 @@ const PrivateRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();
 
   if (loading) {
-    return <div>Loading...</div>; // Спиннер, скелетон қосуға болады
+    return <div>Loading...</div>; 
   }
 
   return isAuthenticated ? children : <Navigate to="/unauthorized" />;
