@@ -610,7 +610,8 @@ body {
     box-shadow: none;
     border-radius: 60px;
     margin-right: 34px;
-    width: 330px;
+    margin: 0 auto !important;
+    width: 300px !important;
   }
 
   .motivationContainer {
