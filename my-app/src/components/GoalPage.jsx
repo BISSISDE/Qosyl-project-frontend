@@ -428,7 +428,7 @@ export default function GoalPage() {
                               }`}
                               onClick={() => {
                                 if (isCurrentUser) {
-                                  startEdit(task); 
+                                  startEdit(task);
                                 }
                               }}
                               style={{
@@ -440,31 +440,33 @@ export default function GoalPage() {
                             >
                               {task.title}
                             </span>
-                            <div
-                              onClick={() => {
-                                if (isCurrentUser) {
-                                  handleToggleStatus(task.id, currentDay); 
-                                }
-                              }}
-                              className={`statusIcon ${
-                                isCompletedForCurrentDay ? "completed" : ""
-                              } ${isCurrentUser ? "clickable" : ""}`}
-                              title={
-                                isCompletedForCurrentDay
-                                  ? "Орындалды"
-                                  : "Орындалмады"
-                              }
-                            >
-                              {isCompletedForCurrentDay ? "✓" : "○"}
-                            </div>
-                            {isCurrentUser && (
+                            <div className="status">
                               <div
-                                onClick={() => handleDeleteTask(task.id)}
-                                className="deleteIcon"
+                                onClick={() => {
+                                  if (isCurrentUser) {
+                                    handleToggleStatus(task.id, currentDay);
+                                  }
+                                }}
+                                className={`statusIcon ${
+                                  isCompletedForCurrentDay ? "completed" : ""
+                                } ${isCurrentUser ? "clickable" : ""}`}
+                                title={
+                                  isCompletedForCurrentDay
+                                    ? "Орындалды"
+                                    : "Орындалмады"
+                                }
                               >
-                                ✕
+                                {isCompletedForCurrentDay ? "✓" : "○"}
                               </div>
-                            )}
+                              {isCurrentUser && (
+                                <div
+                                  onClick={() => handleDeleteTask(task.id)}
+                                  className="deleteIcon"
+                                >
+                                  ✕
+                                </div>
+                              )}
+                            </div>
                           </>
                         )}
                       </div>

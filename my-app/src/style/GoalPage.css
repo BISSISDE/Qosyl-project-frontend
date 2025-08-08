@@ -639,11 +639,13 @@ body {
 
   .statusIcon,
   .deleteIcon {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     font-size: 18px;
   }
-
+  .status{
+    margin-right: 50px;
+  }
   .progressText {
     font-size: 24px;
   }
