@@ -568,35 +568,91 @@ body {
   .tasksList{
     width: 250px !important;
   }
-}@media (max-width: 480px) {
-  .taskCard {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+}
+@media (max-width: 480px) {
+
+  .welcomeTitle,
+  .sectionTitle,
+  .weekTitle {
+    font-size: 36px;
   }
 
-  .taskItemContainer {
+  .userTitle {
+    font-size: 26px;
+  }
+
+  .goalInfo {
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+    gap: 20px;
+  }
+
+  .welcomeSection,
+  .todoSection,
+  .weekSection,
+  .usersStatusSection,
+  .motivationSection {
+    padding: 50px 15px;
+  }
+
+  .todoListCard,
+  .addTaskCard,
+  .userSection,
+  .motivationContainer {
+    padding: 20px;
+  }
+
+  .userSection {
+    padding: 60px 30px;
+    box-shadow: none;
+    border-radius: 60px;
+    margin-right: 24px;
+  }
+
+  .motivationContainer {
+    padding: 60px 20px;
+  }
+
+  .todoListCard,
+  .addTaskCard {
+    margin-left: -10px;
+  }
+
+  .addTaskInput,
+  .addTaskBtn {
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
+  .dayCard {
+    padding: 25px 15px;
+    font-size: 18px;
+  }
+
+  .taskCard {
+    padding: 15px 20px;
   }
 
   .taskTitle {
-    width: 100%;
-    margin-right: 0;
-    text-align: left;
+    font-size: 16px;
   }
 
   .statusIcon,
   .deleteIcon {
-    margin-left: 0;
-    width: 100%;
-    max-width: 100px;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
   }
 
-  .editTaskButtons {
-    width: 100%;
-    justify-content: flex-start;
+  .progressText {
+    font-size: 24px;
+  }
+
+  .motivationTitle {
+    font-size: 28px;
+  }
+
+  .motivationTitle::after {
+    width: 80px;
   }
 }
 
