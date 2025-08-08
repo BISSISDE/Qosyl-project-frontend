@@ -605,7 +605,8 @@ body {
     padding: 60px 30px;
     box-shadow: none;
     border-radius: 60px;
-    margin-right: 24px;
+    margin-right: 34px;
+    width: 300px;
   }
 
   .motivationContainer {
