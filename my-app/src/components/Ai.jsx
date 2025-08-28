@@ -112,6 +112,7 @@ Qosyl — бұл екі адам бірігіп, ортақ мақсатқа ж�
         }
       );
       const malimet = await otinish.json();
+      console.log("Backend response:", malimet);
 
       const teks =
         malimet?.candidates?.[0]?.content?.parts?.[0]?.text ||
