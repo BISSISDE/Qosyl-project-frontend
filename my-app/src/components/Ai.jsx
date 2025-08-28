@@ -104,26 +104,20 @@ Qosyl — бұл екі адам бірігіп, ортақ мақсатқа ж�
 
     try {
       const otinish = await fetch(
-        "https://qosyl-project-backend.onrender.com/api/gemini/ask",
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyDfNIOlSJTL02CmZvKmaySb7nZzWkzazCw",
         {
+          headers: {
+            "Content-Type": "application/json",
+          },
           method: "POST",
-          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ contents }),
         }
       );
-      const malimet = await otinish.json();
-      console.log("Backend response:", malimet);
 
-      if (malimet.error) {
-        setJauap("Error: " + malimet.error.message);
-      } else {
-        const teks =
-          malimet?.candidates?.[0]?.content?.parts?.[0]?.text ||
-          "Answer is undefined";
-        setMessages([...messages, { role: "model", text: teks }]);
-        setJauap(teks);
-        setSuraq("");
-      }
+      const malimet = await otinish.json();
+      const teks =
+        malimet?.candidates?.[0]?.content?.parts?.[0]?.text ||
+        "Answer is undefined";
 
       setMessages([...updatedMessages, { role: "model", text: teks }]);
       setTarikh([...tarikh, suraq]);
@@ -142,9 +136,7 @@ Qosyl — бұл екі адам бірігіп, ортақ мақсатқа ж�
     if (storedUser) {
       const userId = storedUser.id;
       const avatar = storedUser.avatar;
-      setAvatarUrl(
-        `https://qosyl-project-backend.onrender.com/uploads/${userId}/${avatar}`
-      );
+      setAvatarUrl(`https://qosyl-project-backend.onrender.com/uploads/${userId}/${avatar}`);
     }
   }, []);
 
@@ -162,7 +154,7 @@ Qosyl — бұл екі адам бірігіп, ортақ мақсатқа ж�
       <section className="AiSection2">
         <div className="bot1">
           <img className="aiText" src={aiText} alt="" />
-          <img className="robotAiTwo" src={robotAi2} alt="" />
+          <img className="robotAiTwo" src={robotAi2} alt=""/>
         </div>
         <div className="LogicMood">
           <h1>
