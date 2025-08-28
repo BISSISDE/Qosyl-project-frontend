@@ -166,7 +166,7 @@ If you want to tell the purpose or uniqueness of the site, it is important that 
 
     try {
       const otinish = await fetch(
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyDU6uYQWRaqSHQxlHTofXNCqba5H6bdyLQ",
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyDvreXwMev8prJATLjmZIZe12ntowPdTUM",
         {
           headers: {
             "Content-Type": "application/json",
