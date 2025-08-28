@@ -115,7 +115,8 @@ Qosyl — бұл екі адам бірігіп, ортақ мақсатқа ж�
       console.log("Backend response:", malimet);
 
       const teks =
-        malimet?.candidates?.[0]?.content?.parts?.[0]?.text ||
+        malimet?.candidates?.[0]?.content?.parts?.[0]?.text ??
+        malimet?.candidates?.[0]?.content?.text ??
         "Answer is undefined";
 
       setMessages([...updatedMessages, { role: "model", text: teks }]);
