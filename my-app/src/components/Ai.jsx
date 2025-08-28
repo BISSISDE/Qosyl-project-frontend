@@ -114,10 +114,16 @@ Qosyl — бұл екі адам бірігіп, ортақ мақсатқа ж�
       const malimet = await otinish.json();
       console.log("Backend response:", malimet);
 
-      const teks =
-        malimet?.candidates?.[0]?.content?.parts?.[0]?.text ??
-        malimet?.candidates?.[0]?.content?.text ??
-        "Answer is undefined";
+      if (malimet.error) {
+        setJauap("Error: " + malimet.error.message);
+      } else {
+        const teks =
+          malimet?.candidates?.[0]?.content?.parts?.[0]?.text ||
+          "Answer is undefined";
+        setMessages([...messages, { role: "model", text: teks }]);
+        setJauap(teks);
+        setSuraq("");
+      }
 
       setMessages([...updatedMessages, { role: "model", text: teks }]);
       setTarikh([...tarikh, suraq]);
